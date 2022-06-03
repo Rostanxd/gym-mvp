@@ -9,4 +9,5 @@ export default NextAuth({
       issuer: process.env.COGNITO_ISSUER,
     })
   ],
+  secret: process.env.NEXT_PUBLIC_SECRET
 });
