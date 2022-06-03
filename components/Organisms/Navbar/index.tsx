@@ -143,7 +143,7 @@ const Navbar = () => {
                   !loading && !user &&
                   <button
                     className={classNames('bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium')}
-                    onClick={() => signIn()}
+                    onClick={() => signIn('cognito', {callbackUrl: `${window.location.origin}/`})}
                   >
                     Log in
                   </button>
