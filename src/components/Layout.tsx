@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 import Head from 'next/head'
-import {Navbar} from "./Organisms";
+import {Navbar} from "./organisms";
 
 type Props = {
   children?: ReactNode
@@ -19,4 +19,4 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
   </div>
 )
 
-export default Layout
+export default Layout;
