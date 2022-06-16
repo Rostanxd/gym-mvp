@@ -22,6 +22,7 @@ const InputText = (props: InputTextProps) => {
           name={props.name}
           className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-2 sm:text-sm border-gray-300 rounded-md"
           placeholder={props.placeholder}
+          onChange={props.onChange}
         />
       </div>
     </div>
