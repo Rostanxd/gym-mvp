@@ -1,6 +1,6 @@
 import Layout from '../src/components/Layout';
 import {SearchMember} from "../src/components/molecules";
-
+import {TableMenber}from "../src/components/organisms"
 const IndexPage = () => (
   <Layout title="Home">
     <div className={"container"}>
@@ -9,6 +9,9 @@ const IndexPage = () => (
       </h1>
       <div>
         <SearchMember/>
+      </div>
+      <div>
+        <TableMenber row={3} column={3}/>
       </div>
     </div>
   </Layout>

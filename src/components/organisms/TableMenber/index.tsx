@@ -1,6 +1,6 @@
 type ButtonProps = {
-    row: 3 ,
-    column:3,
+    row:number  ,
+    column: number,
   }
 
   const TableMenber = (props: ButtonProps)=>{
