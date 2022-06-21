@@ -70,13 +70,17 @@ const SearchMember = (props: SearchMemberProps) => {
             onChange={handleInputUpdates}
           />
         </div>
-        <div className="w-1/3">
+
+        <div className="w-1/5  pl-20">
+
           <Button
             text={"Buscar"}
             handleOnClick={searchMemberships}
           />
+
         </div>
-        <div className="w-1/3">
+
+        <div className="w-1/3 ">
           <Button
             text={"Crear"}
             handleOnClick={() => {}}

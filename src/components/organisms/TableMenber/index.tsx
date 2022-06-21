@@ -10,9 +10,8 @@ type ButtonProps = {
         for (let c = 0; c < props.column; c= c+1) {
            components.push(
             <>
-              <th className="border-b-2 border-gray-400 py-6 border">ID</th>
+              <th className="border-b-2 border-gray-400 py-6 border">ID + {c}</th>
               <br/>
-              {console.log("columna"+ c)}
             </>
           );
         }
@@ -24,7 +23,7 @@ type ButtonProps = {
         for (let r = 0; r < props.row; r++) {
             components.push(
             <div>
-              <td className="border-b-2 border-gray-400 text-center">44444444560</td>
+              <td className="border-b-2 border-gray-400 text-center">FILA ---- {r}</td>
               <br/>
             </div>
             );  
@@ -35,7 +34,7 @@ type ButtonProps = {
     return(
         <div className="text-center  pl-36">
     
-          <table className="w-auto border">
+          <table className="will-change-auto border">
             <thead className="">
               <tr>{drawnColumn()}</tr>
             </thead>
