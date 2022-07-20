@@ -6,7 +6,8 @@ import {Disclosure, Menu, Transition} from "@headlessui/react"
 import {MenuIcon, XIcon} from "@heroicons/react/outline"
 
 const navigation = [
-  {name: 'Memberships', href: '#', current: true},
+  {name: 'Members', href: '/members', current: true},
+  {name: 'Memberships', href: '/memberships', current: false},
 ]
 
 function classNames(...classes) {
@@ -19,7 +20,7 @@ const Navbar = () => {
   const user = session?.user ?? null;
 
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-primary">
       {({open}) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -60,7 +61,7 @@ const Navbar = () => {
                           key={item.name}
                           href={item.href}
                           className={classNames(
-                            item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                            item.current ? 'bg-secondary text-white' : 'text-gray-300 hover:bg-secondary-3 hover:text-white',
                             'px-3 py-2 rounded-md text-sm font-medium'
                           )}
                           aria-current={item.current ? 'page' : undefined}
@@ -142,7 +143,7 @@ const Navbar = () => {
                 {
                   !loading && !user &&
                   <button
-                    className={classNames('bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium')}
+                    className={classNames('bg-secondary text-white px-3 py-2 rounded-md text-sm font-medium')}
                     onClick={() => signIn('cognito', {callbackUrl: `${window.location.origin}/`})}
                   >
                     Log in
